@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OtherFlags>--sig:ExpertFSharpCh07.fsi</OtherFlags>
+	<!-- does not seem to create signature files. --> 
+  </PropertyGroup> 
+
+  <ItemGroup>   
+    <Compile Include="IStatistic.fs" />   
+    <Compile Include="PeekPoke.fs" />     
+    <Compile Include="SparseVector.fs" />   
+    <Compile Include="GlobalClock.fs" />   
+    <Compile Include="TickTockDriver.fs" />   
+    <Compile Include="whales.fs" /> 
+    <Compile Include="dolphins.fs" />      
+    <Compile Include="whalewatcher.fs" />
+  </ItemGroup>
+   
+</Project>
